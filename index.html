@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+      
+       <div class="container">
+        <div class="celebrate celebrateHide">
+          
+           <div class="celebrate__congratulations">
+               <p id='congratulations__title'>Congratulations</p>
+           </div>
+
+          <div class="celebrate__replay">
+              <p id="replay__title">Хотите сыграть ещё раз?</p>
+          </div>
+          
+           <div class="celebrate__button">
+               <button class="btnReplay">yes</button>
+               <button class="btnClose">no</button>
+           </div>
+        </div>
+        <div class="fieldWithTown">
+            <div class="townWithBlock firstTown">
+                <div class="wrapForBlock">
+                </div>
+            </div>
+            <div class="townWithBlock secondTown">
+                <div class="wrapForBlock"></div>
+            </div>
+            <div class="townWithBlock thirdTown">
+                <div class="wrapForBlock"></div>
+            </div>
+        </div>
+        <aside class="gameSetting">
+               <div class="setting__complexity  setting__block">
+                    <p class="setting__title">СЛОЖНОСТЬ:</p>
+                    <select name="" id="complexity__select">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+               </div>
+               <div class="setting__timer setting__block">
+                    <p class="setting__title ">ВРЕМЯ:</p>
+                    <span class='setting__time hours'>00:</span>
+                    <span class='setting__time minutes'>00:</span>
+                    <span class='setting__time seconds'>00</span>
+               </div>
+               <div class="setting__counter setting__block">
+                   <p class="setting__title ">ХОДЫ:</p>
+                   <div class="moves__counter">0</div>
+               </div>
+               <div class="setting__btnPanel setting__block">
+                   <button id='btnRestart'>ЗАНОВО</button>
+                   <button id="btnReset" class="btnPanel__btn"></button>
+                   <button class="soundEffect btnPanel__btn"></button>
+               </div>
+            
+               <button class="btnForBlock">НАЧАТЬ</button>
+        </aside>
+    </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>

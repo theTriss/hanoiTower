@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 960px;
+    margin: 10rem auto;
+    border: 1px solid #000;
+    background-image: url('background.jpg');
+}
+
+.container .gameSetting {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    min-height: 400px;
+    padding-top: 1.875em;
+    border: 1px solid #000;
+    background-color: #4c7590;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+}
+
+.container .gameSetting .setting__block {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.container .gameSetting .setting__complexity {
+    position: relative;
+}
+
+.container .gameSetting .setting__complexity::after {
+    content: '\2714';
+    position: absolute;
+    right: 80px;
+    top: 31px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #f4b197;
+    pointer-events: none;
+}
+
+.container .gameSetting .setting__complexity #complexity__select {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 0.25rem;
+    padding: 0.25rem .5rem;
+    width: 60px;
+    outline: none;
+    border-radius: .625em / 1.25em;
+    font-size: 1.25rem;
+    border: 2px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+}
+
+.container .gameSetting .setting__complexity #complexity__select:focus option {
+    color: #000;
+}
+
+.container .gameSetting .btnForBlock {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: .4375em 0;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 2em .9375em;
+    color: #fff;
+    background-color: #f4b197;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px #000;
+    
+}
+
+.container .gameSetting .btnForBlock:active, .container .gameSetting .setting__btnPanel #btnRestart:active {
+    box-shadow: 0 0 0 #000;
+}
+
+.container .gameSetting .setting__timer {
+    text-align: center;
+}
+
+.container .gameSetting .setting__timer .setting__time, .container .gameSetting .setting__counter .moves__counter {
+    font-size: 1.25em;
+}
+
+.container .gameSetting .setting__btnPanel #btnRestart {
+    display: block;
+    margin: 0 auto .5em;
+    outline: none;
+    height: 40px;
+    width: 60%;
+    border: 2px solid #000;
+    border-radius: 20px;
+    background-color: #f4b197;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.container .gameSetting .setting__btnPanel .btnPanel__btn {
+    outline: none;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.container .gameSetting .setting__btnPanel #btnReset {
+    background-image: url('reset.png');
+}
+
+.soundEffect {
+    background-image: url('sound.png');
+}
+
+.soundEffect__false {
+    background-image: url('nosound.png');
+}
+
+.container .fieldWithTown {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .fieldWithTown .townWithBlock {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 2rem;
+    width: 200px;
+    min-height: 400px;
+    padding-bottom: 60px;
+    border: 2px solid #f4b197;
+    background-image: -webkit-linear-gradient(left, #ccc, transparent 10%, transparent 90%, #ccc);
+}
+
+.container .fieldWithTown .townWithBlock .wrapForBlock::after, .container .fieldWithTown .townWithBlock .wrapForBlock::before, .container .fieldWithTown .townWithBlock::before {
+    content: '';
+    position: absolute;
+    background-color: #E9967A;
+    border: 2px solid #727272;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px #000;
+    z-index: 2;
+}
+
+.container .fieldWithTown .townWithBlock .wrapForBlock::after, .container .fieldWithTown .townWithBlock .wrapForBlock::before {
+    left: 0;
+    width: 100%;
+    height: 25px;
+}
+
+.container .fieldWithTown .townWithBlock .wrapForBlock::after {
+    bottom: 20px;
+    border-radius: 0 0 2.1875em 2.1875em;
+}
+
+.container .fieldWithTown .townWithBlock .wrapForBlock::before {
+    bottom: 35px;
+    border-radius: 1.875em / .625em;
+}
+
+.container .fieldWithTown .townWithBlock::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, #fff 0%, #fff 30%, #E9967A);
+    border: 1px solid #727272;
+    box-sizing: border-box;
+    box-shadow: 3px 0 5px #000;
+}
+
+.container .fieldWithTown .townWithBlock::before {
+    left: calc(50% - 60px);
+    bottom: 0;
+    height: 20px;
+    width: 120px;
+    border-bottom: none;
+}
+
+.block {
+    position: relative;
+    margin: 0 auto;
+    height: 40px;
+    border: 5px solid #000;
+    border-radius: 1.25em / .625em;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.container .celebrate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s linear;
+    z-index: 4;
+    background-image: -webkit-radial-gradient(circle, transparent, #fefefe);
+}
+
+.celebrateHide {
+    display: none;
+}
+
+.container .celebrate .celebrate__congratulations {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .celebrate .celebrate__congratulations #congratulations__title {
+    font-size: 5rem;
+    font-family: 'Satisfy', cursive;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.container .celebrate .celebrate__congratulations #congratulations__title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url('snow.gif');
+    background-size: cover;
+}
+
+.container .celebrate .celebrate__replay #replay__title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.container .celebrate .celebrate__button {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.container .celebrate .celebrate__button .btnReplay, .container .celebrate .celebrate__button .btnClose {
+    height: 50px;
+    width: 100px;
+    outline: none;
+    background-color: #f4b197;
+    border: 3px solid #000;
+    border-radius: 20px;
+    font-size: 2em;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px #000;
+    cursor: pointer;
+}
+
+.container .celebrate .celebrate__button .btnReplay:active, .container .celebrate .celebrate__button .btnClose:active {
+    box-shadow: inset 2px 2px 5px #000
+}
